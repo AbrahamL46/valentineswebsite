@@ -66,6 +66,12 @@ body {
     border-radius: 12px;
     font-family: Inter;
     justify-content: center;
+    transition: transform 0.1s ease;
+    box-shadow: 0 0 0 rgba(255, 0, 0, 0.6);
+}
+
+.yesbutton:hover{
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
 }
 
 /* No button */

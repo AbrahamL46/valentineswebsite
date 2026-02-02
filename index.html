@@ -28,20 +28,28 @@
 
     <script>
         const noButton = document.querySelector(".nobutton");
+        const yesButton = document.querySelector(".yesbutton");
 
-        let scale = 1;
-        const minScale = 0.5;   //limits how small button can get
+        let noScale = 1;
+        let yesScale = 1;
+
+        const minNoScale = 0.5;   //limits how small no button can get
+        const maxYesScale = 1.5;  //limits how big yes button can grow
+
         const shrinkAmount = 0.08;
+        const growAmount = 0.08;
 
         noButton.addEventListener("mouseenter", () => {
             //random movement
             const x = Math.random() * 200 - 100;
             const y = Math.random() * 200 - 100;
 
-            //shrink gradually
-            scale = Math.max(minScale, scale - shrinkAmount);
+            //update scales accordingly
+            noScale = Math.max(minNoScale, noScale - shrinkAmount);
+            yesScale = Math.min(maxYesScale, yesScale + growAmount);
 
-            noButton.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
+            noButton.style.transform = `translate(${x}px, ${y}px) scale(${noScale})`;
+            yesButton.style.transform = `scale(${yesScale})`;
         });
     </script>
 
