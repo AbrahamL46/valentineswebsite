@@ -83,4 +83,6 @@ body {
     border-radius: 12px;
     font-family: Inter;
     justify-content: center;
+    position: relative;
+    transition: transform 0.1s ease;
 }

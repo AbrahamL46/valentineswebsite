@@ -7,13 +7,14 @@
     <link rel="stylesheet" href = "https://fonts.googleapis.com/css2?family=Inter">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="textbox">
         <div class="toptext">
             <h1>Will you be my valentine?</h1>
         </div>
 
-        <img src="C:\Users\abrah\OneDrive\Desktop\valentineswebsite\images\smug-smirk-with-rose-emoticon-emoticon-removebg-preview.png" alt="emoji holding rose in mouth" class="valentine-img">
+        <img src="images\smug-smirk-with-rose-emoticon-emoticon-removebg-preview.png" alt="emoji holding rose in mouth" class="valentine-img">
     
         <div class="buttonrow">
             <button type="button" class="yesbutton">
@@ -24,5 +25,25 @@
             </button>
         </div>
     </div>
+
+    <script>
+        const noButton = document.querySelector(".nobutton");
+
+        let scale = 1;
+        const minScale = 0.5;   //limits how small button can get
+        const shrinkAmount = 0.08;
+
+        noButton.addEventListener("mouseenter", () => {
+            //random movement
+            const x = Math.random() * 200 - 100;
+            const y = Math.random() * 200 - 100;
+
+            //shrink gradually
+            scale = Math.max(minScale, scale - shrinkAmount);
+
+            noButton.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
+        });
+    </script>
+
 </body>
 </html>
