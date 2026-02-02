@@ -4,7 +4,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: pink
+    background-color: pink;
+    font-family: Inter;
 }
 
 .textbox {
@@ -31,7 +32,24 @@ body {
     text-align: center;
 }
 
+/* Top text in main textbox */
 .toptext {
     margin-bottom: auto;
     align-self: center;
+}
+
+/* Yes button */
+.yesbutton {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    font-family: Inter;
 }
