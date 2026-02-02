@@ -11,10 +11,10 @@
 <body>
     <div class="textbox">
         <div class="toptext">
-            <h1>Will you be my valentine?</h1>
+            <h1 id="question">Will you be my valentine?</h1>
         </div>
 
-        <img src="images\smug-smirk-with-rose-emoticon-emoticon-removebg-preview.png" alt="emoji holding rose in mouth" class="valentine-img">
+        <img src="images/smug-smirk-with-rose-emoticon-emoticon-removebg-preview.png" alt="emoji holding rose in mouth" class="valentine-img" id="roseEmoji">
     
         <div class="buttonrow">
             <button type="button" class="yesbutton">
@@ -29,6 +29,8 @@
     <script>
         const noButton = document.querySelector(".nobutton");
         const yesButton = document.querySelector(".yesbutton");
+        const question = document.getElementById("question");
+        const image = document.getElementById("roseEmoji");
 
         let noScale = 1;
         let yesScale = 1;
@@ -51,6 +53,15 @@
             noButton.style.transform = `translate(${x}px, ${y}px) scale(${noScale})`;
             yesButton.style.transform = `scale(${yesScale})`;
         });
+
+        yesButton.addEventListener("click", () => {
+            question.textContent = "Hooray! 💖";
+
+            image.src = "images/thumbsupemoji-removebg-preview.png";
+            image.alt = "emoji with sunglasses thumbs up";
+
+            noButton.style.display = "none";
+        })
     </script>
 
 </body>
