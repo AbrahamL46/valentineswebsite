@@ -1,0 +1,37 @@
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: pink
+}
+
+.textbox {
+    /* Sizing */
+    width: 500px;
+    height: 350px;
+    background-color: aliceblue;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    /* Center element */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* Center items in element */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    border: 1px black;
+    text-align: center;
+}
+
+.toptext {
+    margin-bottom: auto;
+    align-self: center;
+}
