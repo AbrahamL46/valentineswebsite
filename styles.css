@@ -27,7 +27,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 200px;
     border: 1px black;
     text-align: center;
 }
@@ -36,6 +35,14 @@ body {
 .toptext {
     margin-bottom: auto;
     align-self: center;
+}
+
+/* Row to style buttons */
+.buttonrow{
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 16px;
 }
 
 /* Yes button */
@@ -52,4 +59,22 @@ body {
     cursor: pointer;
     border-radius: 12px;
     font-family: Inter;
+    justify-content: center;
+}
+
+/* No button */
+.nobutton {
+    background-color: gray;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    font-family: Inter;
+    justify-content: center;
 }
